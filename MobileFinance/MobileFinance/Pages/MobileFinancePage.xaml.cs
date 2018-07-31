@@ -1,13 +1,14 @@
-﻿using System;
+﻿using MobileFinance.Classes;
+using MobileFinance.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MobileFinance
+namespace MobileFinance.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MobileFinancePage : ContentPage

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileFinance.Pages.Landing">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="0,0,0,10" Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="Households" Text="Households" BackgroundColor="AliceBlue" HorizontalOptions="Center" WidthRequest="185" BorderWidth="1" />
+                <Button x:Name="Accounts" Text="Accounts" BackgroundColor="AntiqueWhite" HorizontalOptions="Center" WidthRequest="185" BorderWidth="1" />
+                <Button x:Name="Transactions" Text="Transactions" BackgroundColor="AliceBlue"  HorizontalOptions="Center" WidthRequest="185" BorderWidth="1" />
+                <Button x:Name="Budgets" Text="Budgets" BackgroundColor="AntiqueWhite"  HorizontalOptions="Center" WidthRequest="185" BorderWidth="1" />
+            </StackLayout>
+       
+            <StackLayout>
+                <Label Text="Welcome to the Mobile Financeur...That's French!"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

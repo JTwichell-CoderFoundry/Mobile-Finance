@@ -1,3 +1,4 @@
+using MobileFinance.Pages;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,10 +12,11 @@ namespace MobileFinance
 		{
 			InitializeComponent();
 
-            MainPage = new NavigationPage(new MobileFinancePage());
+            //MainPage = new NavigationPage(new MobileFinancePage());
+            MainPage = new NavigationPage(new Landing());
         }
 
-		protected override void OnStart ()
+        protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}

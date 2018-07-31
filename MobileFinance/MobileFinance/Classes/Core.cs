@@ -1,9 +1,10 @@
-﻿using System;
+﻿using MobileFinance.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MobileFinance
+namespace MobileFinance.Classes
 {
     class Core
     {
