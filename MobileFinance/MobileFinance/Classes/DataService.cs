@@ -12,16 +12,22 @@ namespace MobileFinance.Classes
         public static async Task<dynamic> getFinanceApiData(string queryString)
         {
             var client = new HttpClient();
-            var response = await client.GetAsync(queryString);
+            string json = "";
 
-            dynamic data = null;
-            if(response != null)
+            try
             {
-                var json = response.Content.ReadAsStringAsync().Result;
-                data = JsonConvert.DeserializeObject(json);
+                var response = await client.GetAsync(queryString);
+                if (response != null)
+                {
+                    json = response.Content.ReadAsStringAsync().Result;
+                }
             }
-            return data;
-        }
+            catch (Exception ex)
+            {
+                var error = ex.Message;
+            }
 
+            return json;
+        }
     }
 }

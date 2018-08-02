@@ -5,13 +5,13 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Padding="0,0,0,10" Orientation="Horizontal" HorizontalOptions="Center">
-                <Button x:Name="Households" Text="Households" BackgroundColor="AliceBlue" HorizontalOptions="Center" WidthRequest="185" BorderWidth="1" />
-                <Button x:Name="Accounts" Text="Accounts" BackgroundColor="AntiqueWhite" HorizontalOptions="Center" WidthRequest="185" BorderWidth="1" />
-                <Button x:Name="Transactions" Text="Transactions" BackgroundColor="AliceBlue"  HorizontalOptions="Center" WidthRequest="185" BorderWidth="1" />
-                <Button x:Name="Budgets" Text="Budgets" BackgroundColor="AntiqueWhite"  HorizontalOptions="Center" WidthRequest="185" BorderWidth="1" />
+                <Button x:Name="btnHouseholds" Text="Households" BackgroundColor="AliceBlue" HorizontalOptions="Center" WidthRequest="185" BorderWidth="1" />
+                <Button x:Name="btnAccounts" Text="Accounts" BackgroundColor="AntiqueWhite" HorizontalOptions="Center" WidthRequest="185" BorderWidth="1" />
+                <Button x:Name="btnTransactions" Text="Transactions" BackgroundColor="AliceBlue"  HorizontalOptions="Center" WidthRequest="185" BorderWidth="1" />
+                <Button x:Name="btnBudgets" Text="Budgets" BackgroundColor="AntiqueWhite"  HorizontalOptions="Center" WidthRequest="185" BorderWidth="1" />
             </StackLayout>
        
-            <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand">
                 <Label Text="Welcome to the Mobile Financeur...That's French!"
                     VerticalOptions="CenterAndExpand" 
                     HorizontalOptions="CenterAndExpand" />

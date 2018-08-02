@@ -11,13 +11,13 @@ using Xamarin.Forms.Xaml;
 namespace MobileFinance.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MobileFinancePage : ContentPage
+	public partial class HouseholdPage : ContentPage
 	{
-		public MobileFinancePage ()
+		public HouseholdPage ()
 		{
 			InitializeComponent ();
             getHouseholdBtn.Clicked += getHouseholdBtn_Clicked;
-
+            btnShowLandingPage.Clicked += btnShowLandingPage_Clicked;
             this.BindingContext = new Household();
         }
 
@@ -28,6 +28,11 @@ namespace MobileFinance.Pages
                 var household = await Core.GetHousehold(Convert.ToInt32(householdIdEntry.Text));
                 this.BindingContext = household;
             }
+        }
+
+        private async void btnShowLandingPage_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();          
         }
 
     }

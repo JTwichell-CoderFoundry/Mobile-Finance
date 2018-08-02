@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileFinance.Pages.TransactionsPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#a8a8a8" />
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+            <Style x:Key="fieldStyle" TargetType="Label">
+                <Setter Property="TextColor">
+                    <OnPlatform x:TypeArguments="Color" iOS="Black" Android="Green" WinPhone="Red" />
+                </Setter>
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+            <Style x:Key="fieldView" TargetType="ContentView">
+                <Setter Property="Padding" Value="10,0,0,0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="#545454">
+                    <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
+                        <Label Text="Search by Account Id" TextColor="White" FontAttributes="Bold" FontSize="Medium" />
+                        <Label x:Name="AccountIdLabel" Text="Account Id" Style="{StaticResource labelStyle}" />
+                        <Entry x:Name="AccountIdEntry">
+                            <Entry.TextColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White" Android="White" WinPhone="Black"/>
+                            </Entry.TextColor>
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Padding="0,0,0,10" VerticalOptions="End">
+                        <Button x:Name="getTransactionsBtn" Text="Get Transactions" WidthRequest="185" BorderWidth="1" >
+                            <!-- Set iOS colors; use defaults on other platforms -->
+                            <Button.TextColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White" WinPhone="White"/>
+                            </Button.TextColor>
+                            <Button.BorderColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.BorderColor>
+                        </Button>
+                        <Button x:Name="btnShowLandingPage" Text="Home" WidthRequest="185" BorderWidth="1" >
+                            <!-- Set iOS colors; use defaults on other platforms -->
+                            <Button.TextColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White" WinPhone="White"/>
+                            </Button.TextColor>
+                            <Button.BorderColor>
+                                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                            </Button.BorderColor>
+                        </Button>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
